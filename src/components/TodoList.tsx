@@ -1,7 +1,7 @@
 import React from 'react';
 import { Todo } from '../types';
 import TodoItem from './TodoItem';
-import { AnimatePresence, motion } from 'framer-motion'; // Added 'motion' import
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface TodoListProps {
   todos: Todo[];
@@ -18,7 +18,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onToggleComplete, onDelete }
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center text-gray-500 text-lg mt-4"
+            className="text-center text-gray-500 text-lg mt-4 dark:text-gray-400 transition-colors duration-200"
           >
             No todos yet! Add some above.
           </motion.p>
